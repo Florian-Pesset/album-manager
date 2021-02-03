@@ -1,0 +1,20 @@
+.header {
+  background-color: var(--header-background);
+  font-family: var(--pirataOne);
+  color: var(--header-color);
+  padding: 1em;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--header-color);
+  text-decoration: none;
+  font-size: larger;
+}

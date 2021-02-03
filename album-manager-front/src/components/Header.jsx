@@ -1,19 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "../css/header.module.css";
 
 export default function Header() {
   return (
-    <div>
+    <div className={styles.header}>
       <nav>
-        <ul>
+        <ul className={styles.list}>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/albuminfos">AlbumInfos</Link>
-          </li>
-          <li>
-            <Link to="/addalbum">AddAlbum</Link>
+            <Link to="/addalbum">Add your album</Link>
           </li>
         </ul>
       </nav>
