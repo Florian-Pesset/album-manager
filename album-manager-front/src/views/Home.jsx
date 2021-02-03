@@ -10,7 +10,6 @@ export default function Home() {
     GetAlbumList({ setAlbumList });
   }, []);
 
-  console.log(albumList);
   return (
     <div className={styles.home}>
       <div className={styles.title}>
