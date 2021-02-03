@@ -2,10 +2,10 @@ import axios from 'axios';
 
 const GetAlbumList = ({ setAlbumList }) => {
 
-  // const { REACT_APP_API_URL } = process.env;
+  const { REACT_APP_API_URL } = process.env;
 
   axios
-    .get(`http://localhost:8080/albums`)
+    .get(`${REACT_APP_API_URL}/albums`)
     .then((res) => setAlbumList(res.data))
     .catch((error) => {
       console.error(error.message);
