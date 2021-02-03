@@ -2,15 +2,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 :root {
+  /* fonts */
+  --pirataOne: "Pirata One", cursive;
+  --roboto: "Roboto", sans-serif;
+
   /* header */
   --header-background: #141416;
   --header-color: #d8c99d;
 
-  /* fonts */
-  --pirataOne: "Pirata One", cursive;
-  --roboto: "Roboto", sans-serif;
+  /* home */
+  --home-background: #2e2e2e;
+  --homeTitle-color: #d8c99d;
+  --homeText-color: white;
 }
 body {
   margin: 0;
   padding: 0;
+  background-color: #141416;
+  background-image: url("../../pictures/backgroundswordmobile.jpeg");
 }
