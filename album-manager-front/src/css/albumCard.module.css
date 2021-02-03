@@ -1,0 +1,10 @@
+.card {
+  background-color: var(--home-background);
+  text-align: center;
+  margin: 2em;
+  padding: 1em;
+}
+
+.image {
+  border: 2px solid #d8c99d;
+}
