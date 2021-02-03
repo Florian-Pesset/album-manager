@@ -7,7 +7,7 @@ export default function AlbumCard({ albumcard }) {
     <div className={styles.card}>
       <Link to={`/${albumcard.id}`}>
         <img
-          src={albumcard.image}
+          src={albumcard.picture}
           alt={albumcard.title}
           className={styles.image}
         />
