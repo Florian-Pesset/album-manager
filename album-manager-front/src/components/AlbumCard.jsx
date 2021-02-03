@@ -18,3 +18,5 @@ export default function AlbumCard({ albumcard }) {
     </div>
   );
 }
+
+// Proptypes

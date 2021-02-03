@@ -25,10 +25,10 @@ app.get("/albums", (req, res) => {
 
 //as a user, I want to be able to create a new album.
 app.post("/albums", (req, res) => {
-  const { title, genre, picture, artist } = req.body;
+  const { title, genre, picture, artist, date, description } = req.body;
   connection.query(
-    "INSERT INTO album(title, genre, picture, artist) VALUES(?, ?, ?, ?)",
-    [title, genre, picture, artist], 
+    "INSERT INTO album(title, genre, picture, artist, date, description) VALUES(?, ?, ?, ?, ?, ?)",
+    [title, genre, picture, artist, date, description], 
     (err, results) => {
           if (err) {
             res.status(500).send(err);
@@ -58,11 +58,11 @@ app.get("/albums/:id", (req, res) => {
 
 //as a user, I want to create and assign a song to an album.
 app.post("/albums/:id/tracks", (req, res) => {
-  const { title, youtube_url } = req.body;
+  const { title, url, duration } = req.body;
   const id_album = req.params.id;
   connection.query(
-    `INSERT INTO track(title, youtube_url, id_album) VALUES (?, ?, ?)`,
-    [title, youtube_url, id_album],
+    `INSERT INTO track(title, url, duration, id_album) VALUES (?, ?, ?, ?)`,
+    [title, url, duration, id_album],
     (err, results) => {
           if (err) {
             res.status(500).send(err);
