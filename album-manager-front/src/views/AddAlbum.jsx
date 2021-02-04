@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 import PostAlbum from "../services/post/PostAlbum";
 import styles from "../css/addalbum.module.css";
+import AddTracks from "../components/AddTracks";
+import GetAlbumList from "../services/get/GetAlbumList";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,6 +27,12 @@ export default function AddAlbum() {
     picture: "",
     description: "",
   });
+  const [albumList, setAlbumList] = useState([]);
+  const [category, setCategory] = useState(0);
+
+  useEffect(() => {
+    GetAlbumList({ setAlbumList });
+  }, []);
 
   const handleChange = (event) => {
     setInfos({
@@ -45,7 +53,10 @@ export default function AddAlbum() {
     });
   };
 
-  console.log(infos);
+  const handleSelect = (e) => {
+    setCategory(e.target.value);
+  };
+
   return (
     <div className={styles.addalbum}>
       <h1>Add your album</h1>
@@ -105,6 +116,17 @@ export default function AddAlbum() {
             Send
           </button>
         </form>
+
+        <h2>Add tracks</h2>
+        <select name="albums" id="albums" onChange={handleSelect}>
+          <option value="">--Please choose an album--</option>
+          {albumList.map((album) => (
+            <option value={album.id}>
+              {album.artist} / {album.title}
+            </option>
+          ))}
+        </select>
+        <AddTracks id={category} />
       </div>
     </div>
   );
