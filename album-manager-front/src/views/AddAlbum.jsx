@@ -144,7 +144,7 @@ export default function AddAlbum() {
 
         <h2>Add tracks</h2>
         <select name="albums" id="albums" onChange={handleSelect}>
-          <option value="">Choose an album to add a track</option>
+          <option value="">Choose an album to add track</option>
           {albumList.map((album) => (
             <option value={album.id}>
               {album.artist} / {album.title}
