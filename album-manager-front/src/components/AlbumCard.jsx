@@ -5,7 +5,7 @@ import styles from "../css/albumCard.module.css";
 export default function AlbumCard({ albumcard }) {
   return (
     <div className={styles.card}>
-      <Link to={`/${albumcard.id}`}>
+      <Link to={`/album/${albumcard.id}`}>
         <img
           src={albumcard.picture}
           alt={albumcard.title}

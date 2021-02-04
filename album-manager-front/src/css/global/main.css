@@ -18,6 +18,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #141416;
-  background-image: url("../../pictures/backgroundswordmobile.jpeg");
+  background-color: rgb(8, 8, 8);
+  font-family: var(--roboto);
+}
+
+h1 {
+  font-family: var(--pirataOne);
+  color: var(--header-color);
 }
