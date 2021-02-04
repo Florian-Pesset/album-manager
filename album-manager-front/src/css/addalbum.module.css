@@ -10,16 +10,18 @@
   border-radius: 5px;
 }
 
-.input {
-  background-color: whitesmoke;
-  margin: 0.5em;
-}
-
 .textfields {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.input {
+  background-color: whitesmoke;
+  margin: 0.5em;
+  border-radius: 3px;
 }
 
 @media screen and (min-width: 481px) {
