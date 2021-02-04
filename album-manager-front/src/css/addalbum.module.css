@@ -8,6 +8,7 @@
   background-color: var(--home-background);
   color: var(--homeText-color);
   border-radius: 5px;
+  padding: 2em;
 }
 
 .textfields {
@@ -19,7 +20,7 @@
 }
 
 .input {
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.788);
   margin: 0.5em;
   border-radius: 3px;
 }

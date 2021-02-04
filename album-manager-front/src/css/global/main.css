@@ -26,3 +26,26 @@ h1 {
   font-family: var(--pirataOne);
   color: var(--header-color);
 }
+
+button {
+  background-color: #d8c99d;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  margin: 0.5em;
+  cursor: pointer;
+  padding: 1em;
+}
+
+select {
+  background-color: #2e2e2e;
+  color: #d8c99d;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (min-width: 481px) {
+  select {
+    width: auto;
+  }
+}
