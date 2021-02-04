@@ -1,0 +1,10 @@
+.addalbum {
+  text-align: center;
+  margin: 2em;
+  padding: 1em;
+}
+
+.entrees {
+  background-color: var(--home-background);
+  color: var(--homeText-color);
+}

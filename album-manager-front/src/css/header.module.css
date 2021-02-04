@@ -3,6 +3,7 @@
   font-family: var(--pirataOne);
   color: var(--header-color);
   padding: 1em;
+  border-radius: 5px;
 }
 
 .list {
