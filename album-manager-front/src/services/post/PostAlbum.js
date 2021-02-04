@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const PostAlbum = ( infos ) => {
-
   const { REACT_APP_API_URL } = process.env;
 
   axios
