@@ -15,9 +15,11 @@ const PostTracks = ( infosTracks, idAlbum ) => {
     )
     .then(() => {
       console.log(idAlbum);
-      alert("success")})
+      alert("success")
+    })
     .catch((error) => {
       console.error(error.message);
+      alert("Verify your informations");
     });
 };
 
