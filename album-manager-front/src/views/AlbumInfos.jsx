@@ -27,7 +27,7 @@ export default function AlbumInfos(props) {
         <h2>{albumId.title}</h2>
         <p>Artist: {albumId.artist}</p>
         <p>Genre: {albumId.genre} </p>
-        <p>Date: {albumId.date && albumId.date.slice(0, 10)}</p>
+        <p>Date: {albumId.date && albumId.date}</p>
         <p>Description: {albumId.description}</p>
       </div>
 
