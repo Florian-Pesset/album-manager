@@ -140,24 +140,6 @@ app.delete("/albums/:id_album/tracks/:id", (req, res) => {
   );
 });
 
-//as a user, I want to edit a song from an album.
-app.put("/albums/:id_album/tracks/:id", (req, res) => {
-  const id_album = req.params.id_album;
-  const id = req.params.id;
-  const newTrack = req.body;
-  connection.query(
-    "UPDATE track SET ? WHERE id_album = ? AND id = ?",
-    [newTrack, id_album, id],
-    (err, results) => {
-      if (err) {
-        res.status(500).send(err);
-      } else {
-        res.status(200).json({...req.body});
-      }
-    }
-  );
-});
-
 app.listen(port, () => {
   console.log(`Server is runing on ${port}`);
 });
