@@ -3,6 +3,7 @@ import GetAlbumId from "../services/get/GetAlbumId";
 import GetTracks from "../services/get/GetTracks";
 import styles from "../css/albumInfos.module.css";
 import Tracks from "../components/Tracks";
+import ButtonDeleteAlbum from "../components/ButtonDeleteAlbum";
 
 export default function AlbumInfos(props) {
   const [albumId, setAlbumId] = useState([]);
@@ -36,6 +37,7 @@ export default function AlbumInfos(props) {
           <Tracks key={track.id} track={track} />
         ))}
       </div>
+      <ButtonDeleteAlbum id={id} />
     </div>
   );
 }

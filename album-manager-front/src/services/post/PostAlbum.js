@@ -18,6 +18,7 @@ const PostAlbum = ( infos ) => {
     .then(() => alert("success"))
     .catch((error) => {
       console.error(error.message);
+      alert("Verify your informations");
     });
 };
 
