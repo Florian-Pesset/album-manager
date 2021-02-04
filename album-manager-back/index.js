@@ -58,8 +58,8 @@ app.get("/albums/:id", (req, res) => {
 
 //as a user, I want to create and assign a song to an album.
 app.post("/albums/:id/tracks", (req, res) => {
-  const { title, url, duration } = req.body;
-  const id_album = req.params.id;
+  const { title, url, duration, id_album } = req.body;
+  // const id_album = req.params.id;
   connection.query(
     `INSERT INTO track(title, url, duration, id_album) VALUES (?, ?, ?, ?)`,
     [title, url, duration, id_album],
