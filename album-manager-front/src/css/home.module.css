@@ -14,11 +14,24 @@
   text-shadow: rgb(0, 0, 0) 2px 2px;
 }
 
+.sort {
+  background-color: var(--home-background);
+  margin: 1em;
+  padding: 0.4em;
+  display: flex;
+  align-items: center;
+  align-self: center;
+}
+
 @media screen and (min-width: 481px) {
   .cards {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+  }
+
+  .sort {
+    width: 20em;
   }
 }
