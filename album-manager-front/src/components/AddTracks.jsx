@@ -1,21 +1,10 @@
 import { useState } from "react";
 import { TextField } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import styles from "../css/addtracks.module.css";
+
 import PostTracks from "../services/post/PostTracks";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-      backgroundColor: "whitesmoke",
-    },
-  },
-}));
-
 export default function AddTracks(id) {
-  const classes = useStyles();
-
   const [infosTracks, setInfosTracks] = useState({
     title: "",
     duration: "",
@@ -37,31 +26,37 @@ export default function AddTracks(id) {
 
   return (
     <div>
-      <form className={classes.root} noValidate autoComplete="off">
-        <TextField
-          id="title"
-          name="title"
-          label="Title"
-          variant="outlined"
-          onChange={handleChange}
-          value={infosTracks.title}
-        />
-        <TextField
-          id="duration"
-          name="duration"
-          label="Duration"
-          variant="outlined"
-          onChange={handleChange}
-          value={infosTracks.duration}
-        />
-        <TextField
-          id="url"
-          name="url"
-          label="URL"
-          variant="outlined"
-          onChange={handleChange}
-          value={infosTracks.url}
-        />
+      <form noValidate autoComplete="off">
+        <div className={styles.textfields}>
+          <TextField
+            id="title"
+            name="title"
+            label="Title"
+            variant="outlined"
+            onChange={handleChange}
+            value={infosTracks.title}
+            className={styles.input}
+          />
+          <TextField
+            id="duration"
+            name="duration"
+            label="Duration"
+            variant="outlined"
+            onChange={handleChange}
+            value={infosTracks.duration}
+            className={styles.input}
+          />
+          <TextField
+            id="url"
+            name="url"
+            label="URL"
+            variant="outlined"
+            onChange={handleChange}
+            value={infosTracks.url}
+            className={styles.input}
+          />
+        </div>
+
         <button type="button" onClick={handlePostTrack}>
           Send
         </button>

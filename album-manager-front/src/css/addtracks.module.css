@@ -1,15 +1,3 @@
-.addalbum {
-  text-align: center;
-  margin: 2em;
-  padding: 1em;
-}
-
-.entrees {
-  background-color: var(--home-background);
-  color: var(--homeText-color);
-  border-radius: 5px;
-}
-
 .input {
   background-color: whitesmoke;
   margin: 0.5em;
@@ -19,7 +7,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 @media screen and (min-width: 481px) {

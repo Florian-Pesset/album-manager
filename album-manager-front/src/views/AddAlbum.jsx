@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { TextField } from "@material-ui/core";
 import PostAlbum from "../services/post/PostAlbum";
 import styles from "../css/addalbum.module.css";
@@ -8,19 +7,7 @@ import GetAlbumList from "../services/get/GetAlbumList";
 import GetAlbumId from "../services/get/GetAlbumId";
 import PutAlbum from "../services/put/PutAlbum";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-      backgroundColor: "whitesmoke",
-    },
-  },
-}));
-
 export default function AddAlbum() {
-  const classes = useStyles();
-
   const [infos, setInfos] = useState({
     album: "",
     artist: "",
@@ -73,75 +60,83 @@ export default function AddAlbum() {
     <div className={styles.addalbum}>
       <h1>Add your album</h1>
       <div className={styles.entrees}>
-        <select name="albums" id="albums" onChange={handleSelectModify}>
-          <option value="">Choose an album to modify</option>
-          {albumList.map((album) => (
-            <option value={album.id}>
-              {album.artist} / {album.title}
-            </option>
-          ))}
-        </select>
-        <form className={classes.root} noValidate autoComplete="off">
-          <TextField
-            id="album"
-            name="album"
-            label="Album"
-            variant="standard"
-            defaultValue=" "
-            onChange={handleChange}
-            value={infos.album || albumId.title}
-          />
-          <TextField
-            id="artist"
-            name="artist"
-            label="Artist"
-            variant="standard"
-            defaultValue=" "
-            onChange={handleChange}
-            value={infos.artist || albumId.artist}
-          />
-          <TextField
-            id="genre"
-            name="genre"
-            label="Genre"
-            variant="standard"
-            defaultValue=" "
-            onChange={handleChange}
-            value={infos.genre || albumId.genre}
-          />
-          <TextField
-            id="date"
-            name="date"
-            label="Date"
-            variant="standard"
-            defaultValue=" "
-            onChange={handleChange}
-            value={infos.date || albumId.date}
-          />
-          <TextField
-            id="picture"
-            name="picture"
-            label="Picture"
-            variant="standard"
-            defaultValue=" "
-            onChange={handleChange}
-            value={infos.picture || albumId.picture}
-          />
-          <TextField
-            id="description"
-            name="description"
-            label="Description"
-            variant="standard"
-            defaultValue=" "
-            multiline
-            onChange={handleChange}
-            value={infos.description || albumId.description}
-          />
+        <form noValidate autoComplete="off">
+          <div className={styles.textfields}>
+            <TextField
+              id="album"
+              name="album"
+              label="Album"
+              variant="standard"
+              defaultValue=" "
+              onChange={handleChange}
+              value={infos.album || albumId.title}
+              className={styles.input}
+            />
+            <TextField
+              id="artist"
+              name="artist"
+              label="Artist"
+              variant="standard"
+              defaultValue=" "
+              onChange={handleChange}
+              value={infos.artist || albumId.artist}
+              className={styles.input}
+            />
+            <TextField
+              id="genre"
+              name="genre"
+              label="Genre"
+              variant="standard"
+              defaultValue=" "
+              onChange={handleChange}
+              value={infos.genre || albumId.genre}
+              className={styles.input}
+            />
+            <TextField
+              id="date"
+              name="date"
+              label="Date"
+              variant="standard"
+              defaultValue=" "
+              onChange={handleChange}
+              value={infos.date || albumId.date}
+              className={styles.input}
+            />
+            <TextField
+              id="picture"
+              name="picture"
+              label="Picture"
+              variant="standard"
+              defaultValue=" "
+              onChange={handleChange}
+              value={infos.picture || albumId.picture}
+              className={styles.input}
+            />
+            <TextField
+              id="description"
+              name="description"
+              label="Description"
+              variant="standard"
+              defaultValue=" "
+              multiline
+              onChange={handleChange}
+              value={infos.description || albumId.description}
+              className={styles.input}
+            />
 
-          <button type="button" onClick={handleClick}>
-            Add
-          </button>
+            <button type="button" onClick={handleClick}>
+              Add
+            </button>
+          </div>
 
+          <select name="albums" id="albums" onChange={handleSelectModify}>
+            <option value="">Choose an album to modify</option>
+            {albumList.map((album) => (
+              <option value={album.id}>
+                {album.artist} / {album.title}
+              </option>
+            ))}
+          </select>
           <button type="button" onClick={modifyAlbum}>
             Modify
           </button>

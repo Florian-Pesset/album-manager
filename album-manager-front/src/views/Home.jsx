@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.title}>
         <h1>Welcome to your album manager</h1>
       </div>
-      <div>
+      <div className={styles.cards}>
         {albumList.map((album) => (
           <AlbumCard key={album.id} albumcard={album} />
         ))}
