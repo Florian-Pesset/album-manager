@@ -18,7 +18,6 @@ const PostAlbum = ( infos ) => {
     .then(() => alert("success"))
     .catch((error) => {
       console.error(error.message);
-      console.log(infos);
     });
 };
 
