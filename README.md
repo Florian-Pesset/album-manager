@@ -3,14 +3,14 @@
 
 ### Installation
 
-Clone this project
-Go to album-manager-back and install with npm i.
-Go to album-manager-front and install with npm i.
+- Clone this project
+- Go to album-manager-back and install with npm i.
+- Go to album-manager-front and install with npm i.
 
 ## Start
 
-Go to album-manager-back and start server with npm start.
-Go to album-manager-front and start server with npm start.
+- Go to album-manager-back and start server with npm start.
+- Go to album-manager-front and start server with npm start.
 
 
 ## Techs
