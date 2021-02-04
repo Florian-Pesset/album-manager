@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import PostTracks from "../services/post/PostAlbum";
+import PostTracks from "../services/post/PostTracks";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,11 +33,6 @@ export default function AddTracks(id) {
 
   const handlePostTrack = () => {
     PostTracks(infosTracks, idAlbum);
-    setInfosTracks({
-      title: "",
-      duration: "",
-      url: "",
-    });
   };
 
   return (

@@ -13,10 +13,11 @@ const PostTracks = ( infosTracks, idAlbum ) => {
       id_album: idAlbum,
     }
     )
-    .then(() => alert("success"))
+    .then(() => {
+      console.log(idAlbum);
+      alert("success")})
     .catch((error) => {
       console.error(error.message);
-      console.log(infosTracks);
     });
 };
 
