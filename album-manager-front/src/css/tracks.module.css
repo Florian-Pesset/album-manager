@@ -1,0 +1,7 @@
+@media screen and (min-width: 481px) {
+  .infosTracks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
