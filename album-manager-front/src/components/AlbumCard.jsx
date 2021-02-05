@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../css/albumCard.module.css";
+import PropTypes from "prop-types";
 
 export default function AlbumCard({ albumcard }) {
   return (
@@ -19,4 +20,11 @@ export default function AlbumCard({ albumcard }) {
   );
 }
 
-// Proptypes
+AlbumCard.propTypes = {
+  albumcard: PropTypes.shape({
+    id: PropTypes.string,
+    picture: PropTypes.string,
+    title: PropTypes.string,
+    artist: PropTypes.string,
+  }),
+};

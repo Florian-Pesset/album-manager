@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteAlbum from "../services/delete/DeleteAlbum";
+import PropTypes from "prop-types";
 
 export default function ButtonDeleteAlbum({ id }) {
   const handleDeleteAlbum = () => {
@@ -14,3 +15,7 @@ export default function ButtonDeleteAlbum({ id }) {
     </div>
   );
 }
+
+ButtonDeleteAlbum.propTypes = {
+  id: PropTypes.string,
+};
