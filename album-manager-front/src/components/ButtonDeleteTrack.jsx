@@ -1,5 +1,6 @@
 import React from "react";
 import DeleteTrack from "../services/delete/DeleteTrack";
+import PropTypes from "prop-types";
 
 export default function ButtonDeleteTrack({ track }) {
   const handleDeleteTrack = () => {
@@ -15,3 +16,7 @@ export default function ButtonDeleteTrack({ track }) {
     </div>
   );
 }
+
+ButtonDeleteTrack.propTypes = {
+  track: PropTypes.shape,
+};

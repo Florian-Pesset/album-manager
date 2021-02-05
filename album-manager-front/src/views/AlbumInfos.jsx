@@ -4,6 +4,7 @@ import GetTracks from "../services/get/GetTracks";
 import styles from "../css/albumInfos.module.css";
 import Tracks from "../components/Tracks";
 import ButtonDeleteAlbum from "../components/ButtonDeleteAlbum";
+import PropTypes from "prop-types";
 
 export default function AlbumInfos(props) {
   const [albumId, setAlbumId] = useState([]);
@@ -14,8 +15,6 @@ export default function AlbumInfos(props) {
     GetAlbumId({ setAlbumId, id });
     GetTracks({ setTracks, id });
   }, [id]);
-
-  console.log(albumId.date);
 
   return (
     <div className={styles.main}>
@@ -42,3 +41,11 @@ export default function AlbumInfos(props) {
     </div>
   );
 }
+
+AlbumInfos.propTypes = {
+  match: {
+    params: {
+      id: PropTypes.string,
+    },
+  },
+};
