@@ -1,5 +1,6 @@
 # album-manager
 
+hosted at https://album-manager-pst.netlify.app/ (may be slow)
 
 ### Installation
 
